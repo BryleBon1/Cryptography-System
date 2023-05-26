@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Cryptography System</title>
+    <style>
+    body {
+      background-image: linear-gradient(black, darkblue);
+      font-family: Arial, sans-serif;
+      color: #ffffff;
+      margin: 0;
+      padding: 100px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ffffff;
+      font-weight: 900;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #ffffff00;
+      border-radius: 10px;
+      padding: 30px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 7px solid #0a8a79;  
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #000;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;  
+    }
+
+    button:hover {
+      background-color: #26868d;
+    }
+
+    textarea {
+      height: 120px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Cryptography System</h1>
+    <div>
+      <label for="plaintext">Plain Text:</label>
+      <input type="text" id="plaintext" placeholder="Enter the plain text">
+    </div>
+    <div>
+      <label for="fileInput">File Input:</label>
+      <input type="file" id="fileInput">
+    </div>
+    <input type="number" id="shift" placeholder="Enter the shift value">
+    <button onclick="encrypt()">Encrypt</button>
+    <button onclick="decrypt()">Decrypt</button>
+    <button onclick="clearFields()">Clear All</button>
+    <textarea id="result" placeholder="Result" readonly></textarea>
+    <button onclick="saveResult()">Save</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
